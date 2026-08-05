@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hippostat — Programme du jour</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="app.js" defer></script>
+</head>
+
+<header class="site-header">
+
+  <div class="logo-zone">
+
+    <img
+      src="images/logo-hippostat.png"
+      alt="Logo HIPPOSTAT"
+      class="logo-hippostat"
+    >
+
+    <div class="titre-site">
+
+      <h1>HIPPOSTAT</h1>
+
+      <p>L'analyse visuelle des courses</p>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
+<body>
+
+
+  <main class="page">
+    
+    <div id="chargement" class="message">Chargement du programme…</div>
+    <div id="erreur" class="message error hidden"></div>
+    <section class="selection-chevaux">
+
+  
+
+   
+    <section id="contenu" class="hidden">
+      <div class="controls">
+        <div class="control-group">
+          <label for="selectionCourse">Programme du jour</label>
+          <select id="selectionCourse"></select>
+        </div>
+      </div>
+
+   <section
+  id="selectionChevaux"
+  class="selection-chevaux hidden"
+>
+  
+
+    <div class="selection-actions">
+
+      <button
+        type="button"
+        id="selectionnerTous"
+      >
+        Tous
+      </button>
+
+      <button
+        type="button"
+        id="deselectionnerTous"
+      >
+        Aucun
+      </button>
+
+    </div>
+
+  </div>
+
+  <div
+    id="listeChevaux"
+    class="liste-chevaux"
+  ></div>
+</section>
+
+  <div
+    id="listeChevaux"
+    class="liste-chevaux"
+  ></div>
+      <div id="courseInfo" class="course-info"></div>
+
+         <div class="selection-chevaux-header">
+     <h2>Chevaux à comparer</h2>
+    </div>
+      <div class="legende-performances">
+
+      <span><i class="c1"></i>1er</span>
+
+      <span><i class="c2"></i>2e</span>
+
+      <span><i class="c3"></i>3e</span>
+
+      <span><i class="c4"></i>4-5e</span>
+
+      <span><i class="c5"></i>6-7e</span>
+
+    
+
+   <div class="chart-container chart-container-sombre">
+  <canvas id="gainsParCheval"></canvas>
+</div>
+
+<div class="chart-container chart-container-bulles">
+  <canvas id="evolutionPerformances"></canvas>
+</div>
+
+      
+    </section>
+
+    <footer class="site-footer">
+
+  <div class="site-footer-identite">
+
+    <strong>HIPPOSTAT</strong>
+
+    <span class="site-footer-version">
+      Version 1.0 DEMO
+    </span>
+
+  </div>
+
+  <p class="site-footer-description">
+    Outil d'aide à l'analyse visuelle des courses hippiques.
+  </p>
+
+  <p class="site-footer-avertissement">
+    Les informations sont fournies à titre indicatif.
+    HIPPOSTAT est un outil d'aide à l'analyse et ne constitue pas un pronostic.
+  </p>
+
+  <div class="site-footer-actions">
+
+    <a
+      class="bouton-footer"
+      href="mailto:hippostat.fr@gmail.com?subject=Avis%20sur%20HIPPOSTAT"
+    >
+      ✉ Donner mon avis
+    </a>
+
+    <a
+      class="bouton-footer bouton-footer-secondaire"
+      href="mailto:hippostat.fr@gmail.com?subject=Contact%20HIPPOSTAT"
+    >
+      📧 Contact
+    </a>
+
+  </div>
+
+  <p class="site-footer-copyright">
+    © 2026 HIPPOSTAT
+  </p>
+
+</footer>
+  </main>
+</body>
+</html>

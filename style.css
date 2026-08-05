@@ -1,0 +1,348 @@
+* { box-sizing: border-box; }
+html, body { width: 100%; margin: 0; overflow-x: hidden; }
+body { padding: 24px; font-family: Arial, sans-serif; color: #222; background-color: #f4f6f8; }
+.page { width: 100%; max-width: 1450px; margin: 0 auto; }
+h1 { margin: 0 0 24px; text-align: center; color: #25364a; }
+.controls { display: flex; align-items: end; gap: 20px; flex-wrap: wrap; margin-bottom: 20px; padding: 18px 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+.control-group { min-width: 280px; flex: 1; }
+label { display: block; margin-bottom: 7px;font-size:24px; font-weight: 700; color: #233247; }
+select { width: 100%; padding: 10px 12px; border: 1px solid #cbd3dc; border-radius: 6px; background: #fff; font-size: 15px; }
+.course-info { margin-bottom: 20px; padding: 18px 20px; background: #fff; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+.course-info h2 { margin: 0 0 10px; color: #25364a; }
+.course-meta { display: flex; flex-wrap: wrap; gap: 18px 35px; color: #566575; }
+.course-meta strong { color: #25364a; }
+
+
+
+
+.chart-container {
+  position: relative;
+
+  width: 100%;
+  height: 480px;
+
+  margin: 0 auto 20px;
+  padding: 16px 20px;
+
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.site-header {
+
+    background: linear-gradient(
+        180deg,
+        #1f2b3d 0%,
+        #172334 100%
+    );
+
+    padding: 18px 32px;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.18);
+}
+
+.logo-zone {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+.logo-hippostat {
+
+    width: 100px;
+
+    height: 100px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.titre-site h1 {
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 3.2rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+}
+
+.titre-site p {
+
+    margin-top: 8px;
+
+    margin-bottom: 0;
+
+    color: #d7dee8;
+
+    font-size: 1.35rem;
+
+    font-weight: 300;
+}
+/*
+ * Fond sombre limité à la zone du graphique.
+ */
+.chart-container-sombre {
+  background: linear-gradient(
+    180deg,
+    #283547 0%,
+    #1d2836 100%
+  );
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+.chart-container-bulles {
+  position: relative;
+  width: 100%;
+  height: 430px;
+
+  margin-bottom: 20px;
+  padding: 20px;
+
+  overflow: hidden;
+  border-radius: 10px;
+
+  background: linear-gradient(
+    180deg,
+    #283547 0%,
+    #1d2836 100%
+  );
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.18);
+}
+
+
+.message { padding: 18px 20px; background: #fff; border-radius: 10px; text-align: center; color: #566575; box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+.error { color: #a32020; background: #fff2f2; }
+.hidden { display: none; }
+.legende-performances {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  margin: 5px 0 15px;
+
+  color: #17283f;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.legende-performances span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.legende-performances i {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+}
+
+.c1 {
+  background: rgba(34, 139, 34, 0.85);
+}
+
+.c2 {
+  background: rgba(76, 175, 80, 0.75);
+}
+
+.c3 {
+  background: rgba(129, 199, 132, 0.65);
+}
+
+.c4 {
+  background: rgba(100, 181, 246, 0.70);
+}
+
+.c5 {
+  background: rgba(180, 180, 180, 0.70);
+}
+
+.selection-chevaux {
+  margin-bottom: 20px;
+  padding: 18px 20px;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+.selection-chevaux-header {
+  margin-bottom: 15px;
+}
+
+.selection-chevaux-header h2 {
+  margin: 0;
+  color: #25364a;
+  font-size: 18px;
+}
+
+.liste-chevaux {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(190px, 1fr)
+    );
+
+  gap: 9px 14px;
+}
+
+.cheval-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 7px 9px;
+
+  border: 1px solid #e1e6ec;
+  border-radius: 6px;
+
+  background: #fafbfc;
+}
+
+.cheval-checkbox input {
+  cursor: pointer;
+}
+
+.cheval-checkbox label {
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.selection-chevaux {
+  margin-bottom: 20px;
+  padding: 18px 20px;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  box-shadow:
+    0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.selection-chevaux-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 14px;
+}
+
+.selection-chevaux-header h2 {
+  margin: 0;
+
+  color: #25364a;
+  font-size: 18px;
+}
+
+.selection-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.selection-actions button {
+  padding: 7px 13px;
+
+  border: 1px solid #cbd3dc;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #25364a;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.selection-actions button:hover {
+  background: #edf2f7;
+}
+
+.liste-chevaux {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(210px, 1fr)
+    );
+
+  gap: 9px 14px;
+}
+
+.choix-cheval {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  min-width: 0;
+  padding: 8px 10px;
+
+  border: 1px solid #e1e6ec;
+  border-radius: 7px;
+
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+.choix-cheval:hover {
+  background: #eef3f7;
+}
+
+.choix-cheval input {
+  width: 17px;
+  height: 17px;
+
+  margin: 0;
+  flex-shrink: 0;
+
+  cursor: pointer;
+}
+
+.choix-cheval-numero {
+  min-width: 23px;
+
+  font-weight: 700;
+  color: #25364a;
+}
+
+.choix-cheval-nom {
+  overflow: hidden;
+
+  color: #334155;
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+
