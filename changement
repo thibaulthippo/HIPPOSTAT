@@ -209,6 +209,16 @@
             afficherCourse(
               select.value
             );
+   gtag(
+      "event",
+      "changement_course",
+      {
+        course_id:
+          select.value
+      }
+    );
+
+              
           }
         );
 
@@ -2788,6 +2798,23 @@ function gererChangementSelectionCheval(
       cleCheval
     );
   }
+
+  // Google Analytics
+  if (typeof gtag === "function") {
+
+    gtag(
+      "event",
+      "selection_cheval",
+      {
+        cheval: caseACocher.value,
+        selection: caseACocher.checked
+          ? "coche"
+          : "decoche"
+      }
+    );
+
+  }
+
 
   mettreAJourGraphiquesSelection();
 }
